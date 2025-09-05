@@ -70,7 +70,6 @@
             // 
             // mtbTelefono
             // 
-            mtbTelefono.Enabled = false;
             mtbTelefono.Location = new Point(150, 70);
             mtbTelefono.Mask = "000-000-0000";
             mtbTelefono.Name = "mtbTelefono";
@@ -100,7 +99,6 @@
             // 
             // btnGrabar
             // 
-            btnGrabar.Enabled = false;
             btnGrabar.Location = new Point(178, 128);
             btnGrabar.Name = "btnGrabar";
             btnGrabar.Size = new Size(116, 23);

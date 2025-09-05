@@ -27,6 +27,12 @@ namespace pryDiFiniContacto
 
             lstResultados.Items.Add(Resultados);
 
+            if (Contador >= 10) // límite de 100 registros
+            {
+                MessageBox.Show("Se alcanzó el límite de registros.");
+                return;
+            }
+
             txtContacto.Text = "";
             mtbTelefono.Text = "";
             txtContacto.Focus();
