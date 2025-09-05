@@ -1,3 +1,5 @@
+using System.Diagnostics.Eventing.Reader;
+
 namespace pryDiFiniContacto
 {
     public partial class frmContacto : Form
@@ -28,6 +30,16 @@ namespace pryDiFiniContacto
             txtContacto.Text = "";
             mtbTelefono.Text = "";
             txtContacto.Focus();
+        }
+
+        private void txtContacto_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void mtbTelefono_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            
         }
     }
 }

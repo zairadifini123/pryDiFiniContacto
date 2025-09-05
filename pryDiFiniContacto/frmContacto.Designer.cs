@@ -55,6 +55,7 @@
             txtContacto.Name = "txtContacto";
             txtContacto.Size = new Size(144, 23);
             txtContacto.TabIndex = 1;
+            txtContacto.TextChanged += txtContacto_TextChanged;
             // 
             // lblTelefono
             // 
@@ -69,11 +70,13 @@
             // 
             // mtbTelefono
             // 
+            mtbTelefono.Enabled = false;
             mtbTelefono.Location = new Point(150, 70);
             mtbTelefono.Mask = "000-000-0000";
             mtbTelefono.Name = "mtbTelefono";
             mtbTelefono.Size = new Size(144, 23);
             mtbTelefono.TabIndex = 3;
+            mtbTelefono.MaskInputRejected += mtbTelefono_MaskInputRejected;
             // 
             // btnSalir
             // 
@@ -97,6 +100,7 @@
             // 
             // btnGrabar
             // 
+            btnGrabar.Enabled = false;
             btnGrabar.Location = new Point(178, 128);
             btnGrabar.Name = "btnGrabar";
             btnGrabar.Size = new Size(116, 23);
