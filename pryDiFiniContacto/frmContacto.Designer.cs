@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmContacto));
             lblContacto = new Label();
             txtContacto = new TextBox();
             lblTelefono = new Label();
@@ -82,7 +83,7 @@
             btnSalir.TabIndex = 4;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
-            btnSalir.Click += this.btnSalir_Click;
+            btnSalir.Click += btnSalir_Click;
             // 
             // lstResultados
             // 
@@ -102,6 +103,7 @@
             btnGrabar.TabIndex = 6;
             btnGrabar.Text = "Grabar";
             btnGrabar.UseVisualStyleBackColor = true;
+            btnGrabar.Click += btnGrabar_Click;
             // 
             // frmContacto
             // 
@@ -116,6 +118,7 @@
             Controls.Add(lblTelefono);
             Controls.Add(txtContacto);
             Controls.Add(lblContacto);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmContacto";
             Text = "Contacto";
             ResumeLayout(false);
