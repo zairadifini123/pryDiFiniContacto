@@ -4,6 +4,13 @@ namespace pryDiFiniContacto
 {
     public partial class frmContacto : Form
     {
+        string Contacto = "";
+        string Telefono = "";
+        int Contador = 0;
+        int Indice = 0;
+
+        string[] vecContacto = new string[4];
+        string[] vecTelefono = new string[4];
         public frmContacto()
         {
             InitializeComponent();
@@ -14,9 +21,7 @@ namespace pryDiFiniContacto
             this.Close();
         }
 
-        string Contacto = "";
-        string Telefono = "";
-        int Contador = 0;
+       
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             Contador++;
@@ -26,6 +31,11 @@ namespace pryDiFiniContacto
             string Resultados = Contador + "-" + Contacto + "-" + Telefono;
 
             lstResultados.Items.Add(Resultados);
+
+            vecContacto[Indice] = Contacto;
+            vecTelefono[Indice] = Telefono;
+
+            Indice++;
 
             if (Contador >= 10) // límite de 100 registros
             {
@@ -40,7 +50,7 @@ namespace pryDiFiniContacto
 
         private void txtContacto_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void mtbTelefono_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
